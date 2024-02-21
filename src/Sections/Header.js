@@ -1,4 +1,5 @@
 import React from 'react';
+import HeaderOptions from '../Components/HeaderOptions';
 
 const Header = () => {
   return (
@@ -20,7 +21,11 @@ const Header = () => {
 
       {/* header-right */}
       <div className=''>
-
+        <HeaderOptions icon={<i class="fa-solid fa-house" style={{ color: "#808080" }}></i>} title="Home" />
+        <HeaderOptions icon={<i class="fa-solid fa-user-group" style={{ color: "#808080" }}></i>} title="My Networks" />
+        <HeaderOptions icon={<i class="fa-solid fa-briefcase" style={{ color: "#808080" }}></i>} title="Jobs" />
+        <HeaderOptions icon={<i class="fa-solid fa-comment-dots" style={{ color: "#808080" }}></i>} title="Messaging" />
+        <HeaderOptions icon={<i class="fa-solid fa-bell" style={{ color: "#808080" }}></i>} title="Notifications" />
       </div>
     </header>
   )
