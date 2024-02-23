@@ -4,7 +4,7 @@ import HeaderOptions from '../Components/HeaderOptions';
 const Header = () => {
   return (
     <header className='fixed top-0 w-full overflow-hidden z-10 shadow-sm'>
-      <nav className='container mx-auto py-4 px-6 flex items-center justify-between'>
+      <nav className='container mx-auto pt-4 pb-3 px-6 flex items-center justify-between'>
         {/* header-left */}
         <div className='flex items-center'>
           <img
@@ -15,18 +15,19 @@ const Header = () => {
 
           {/* search bar */}
           <div className='flex items-center px-4 py-1 h-[38px] gap-2 bg-[#eef3f8] rounded'>
-            <i class="fa-solid fa-magnifying-glass" style={{ color: "#808080" }}></i>
+            <i class="fa-solid fa-magnifying-glass" style={{ color: "#696969" }}></i>
             <input type='text' placeholder='Search' className='outline-none border-none bg-[#eef3f8]' />
           </div>
         </div>
 
         {/* header-right */}
-        <div className='flex gap-8'>
-          <HeaderOptions icon={<i class="fa-solid fa-house fa-lg" style={{ color: "#808080" }}></i>} title="Home" />
-          <HeaderOptions icon={<i class="fa-solid fa-user-group fa-lg" style={{ color: "#808080" }}></i>} title="My Network" />
-          <HeaderOptions icon={<i class="fa-solid fa-briefcase fa-lg" style={{ color: "#808080" }}></i>} title="Jobs" />
-          <HeaderOptions icon={<i class="fa-solid fa-comment-dots fa-lg" style={{ color: "#808080" }}></i>} title="Messaging" />
-          <HeaderOptions icon={<i class="fa-solid fa-bell fa-lg" style={{ color: "#808080" }}></i>} title="Notifications" />
+        <div className='flex gap-7 items-center'>
+          <HeaderOptions icon={<i class="fa-solid fa-house fa-lg overRide" style={{ color: "#696969" }}></i>} title="Home" />
+          <HeaderOptions icon={<i class="fa-solid fa-user-group fa-lg overRide" style={{ color: "#696969" }}></i>} title="My Network" />
+          <HeaderOptions icon={<i class="fa-solid fa-briefcase fa-lg overRide" style={{ color: "#696969" }}></i>} title="Jobs" />
+          <HeaderOptions icon={<i class="fa-solid fa-message fa-lg overRide" style={{ color: "#696969" }}></i>} title="Messaging" />
+          <HeaderOptions icon={<i class="fa-solid fa-bell fa-lg overRide" style={{ color: "#696969" }}></i>} title="Notifications" />
+          <HeaderOptions icon={<img src='/assets/avatar.png' alt='Porfile picture' width={25} />} title="Me" />
         </div>
       </nav>
     </header>

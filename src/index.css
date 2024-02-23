@@ -19,4 +19,8 @@
         max-width: 1024px;
         margin: 0 auto;
     }
+
+    .overRide:hover {
+        color: #000000 !important;
+    }
 }
