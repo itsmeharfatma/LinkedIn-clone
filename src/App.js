@@ -5,16 +5,16 @@ import Sidebar from './Sections/Sidebar';
 
 function App() {
   return (
-    <div className="bg-gray-50 flex flex-col">
+    <main className="flex flex-col">
       <Header />
-      <div className='flex'>
+      <div className='bg-gray-50 flex'>
         <Sidebar />
 
         {/* Feed */}
 
         {/* Widgets */}
       </div>
-    </div>
+    </main>
   );
 }
 

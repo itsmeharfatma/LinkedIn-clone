@@ -3,7 +3,7 @@ import HeaderOptions from '../Components/HeaderOptions';
 
 const Header = () => {
   return (
-    <header className='sticky top-0 w-full overflow-hidden z-10 shadow-sm'>
+    <header className='sticky top-0 w-full overflow-hidden z-10 shadow-sm bg-white'>
       <nav className='container mx-auto pt-4 pb-3 px-6 flex items-center justify-between'>
         {/* header-left */}
         <div className='flex items-center'>
