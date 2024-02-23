@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const HeaderOptions = ({ icon, title }) => {
   return (
@@ -9,4 +9,4 @@ const HeaderOptions = ({ icon, title }) => {
   )
 }
 
-export default HeaderOptions
+export default HeaderOptions;
