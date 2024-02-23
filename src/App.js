@@ -5,9 +5,9 @@ import Sidebar from './Sections/Sidebar';
 
 function App() {
   return (
-    <div className="app">
+    <div className="bg-gray-50 flex flex-col">
       <Header />
-      <div className=''>
+      <div className='flex'>
         <Sidebar />
 
         {/* Feed */}
