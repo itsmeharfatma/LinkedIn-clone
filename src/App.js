@@ -7,7 +7,7 @@ function App() {
   return (
     <main className="flex flex-col">
       <Header />
-      <div className='bg-gray-50 flex'>
+      <div className='bg-gray-100 flex py-3 px-14'>
         <Sidebar />
 
         {/* Feed */}
