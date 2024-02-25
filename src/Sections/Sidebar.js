@@ -20,10 +20,10 @@ const Sidebar = () => {
         <div className='sticky top-20 w-1/5 rounded-lg h-fit'>
             {/* top-sidebar */}
             <div className='flex flex-col items-center border border-gray-200 rounded-t-lg pb-4 bg-white text-center'>
-                <img src='/assets/background-pic.jpg' alt='Background-picture'
+                <img src='/assets/background-pic.jpg' alt='Background-pic'
                     className='w-full object-cover rounded-t-lg h-16' />
-                <div className='bg-white rounded-full w-[75px] h-[75px] -mt-10 mb-4 cursor-pointer'>
-                    <img src='/assets/avatar.png' alt='Porfile-picture' width={70} className='mt-0.5 ml-0.5' />
+                <div className='bg-white rounded-full w-[75px] h-[75px] -mt-10 mb-4 cursor-pointer overflow-hidden'>
+                    <img src='/assets/avatar.png' alt='Porfile-pic' className='object-cover w-full h-full rounded-full border-2 border-white' />
                 </div>
                 <h2 className='font-semibold cursor-pointer hover:underline hover:decoration-[#8d6cab]'>Mehar Fatma</h2>
                 <h4 className='text-sm text-[#86888a] font-light'>meharfatma1234@gmail.com</h4>

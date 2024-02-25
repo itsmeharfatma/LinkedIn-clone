@@ -27,7 +27,9 @@ const Header = () => {
           <HeaderOptions icon={<i class="fa-solid fa-briefcase fa-lg overRide" style={{ color: "#696969" }}></i>} title="Jobs" />
           <HeaderOptions icon={<i class="fa-solid fa-message fa-lg overRide" style={{ color: "#696969" }}></i>} title="Messaging" />
           <HeaderOptions icon={<i class="fa-solid fa-bell fa-lg overRide" style={{ color: "#696969" }}></i>} title="Notifications" />
-          <HeaderOptions icon={<img src='/assets/avatar.png' alt='Porfile picture' width={25} />} title="Me" />
+          <HeaderOptions icon={<div className='rounded-full overflow-hidden w-[28px] h-[28px]'>
+            <img src='/assets/avatar.png' alt='Porfile-pic' width={25} className='object-cover w-full h-full rounded-full' />
+          </div>} title="Me" />
         </div>
       </nav>
     </header>

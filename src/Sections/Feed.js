@@ -5,13 +5,10 @@ const Feed = () => {
         <div className='flex flex-col w-1/2 mx-6'>
             <div className='flex flex-col justify-between bg-white pt-4 pb-2 px-4 mb-5 border border-gray-200 rounded-lg'>
                 <div className='flex justify-between mb-2'>
-                    <img
-                        src='/assets/avatar.png'
-                        alt='Profile-picture'
-                        width={55}
-                        className='object-contain mr-4'
-                    />
-                    <div className='w-full border border-gray-400 rounded-full py-3 px-6'>
+                    <div className='bg-white rounded-full overflow-hidden mr-2 w-[55px] h-[55px]'>
+                        <img src='/assets/avatar.png' alt='Porfile-pic' width={55} className='object-cover w-full h-full rounded-full' />
+                    </div>
+                    <div className='w-11/12 border border-gray-400 rounded-full py-3 px-6'>
                         <form className='flex justify-between'>
                             <input type='text' placeholder='Start a post, try writing with AI' className='w-full outline-none border-none' />
                             <button type='submit' className='hidden'>Post</button>
