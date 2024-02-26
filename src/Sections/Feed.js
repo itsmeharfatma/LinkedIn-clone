@@ -34,7 +34,7 @@ const Feed = () => {
 
     return (
         <div className='flex flex-col w-1/2 mx-6'>
-            <div className='flex flex-col justify-between bg-white pt-4 pb-2 px-4 mb-4 border border-gray-200 rounded-lg'>
+            <div className='flex flex-col justify-between bg-white pt-4 pb-2 px-4 border border-gray-200 rounded-lg'>
                 <div className='flex justify-between mb-2'>
                     <div className='bg-white rounded-full overflow-hidden mr-2 w-[55px] h-[55px]'>
                         <img src='/assets/avatar.png' alt='Porfile-pic' width={55} className='object-cover w-full h-full rounded-full' />
@@ -62,7 +62,7 @@ const Feed = () => {
                     </button>
                 </div>
             </div>
-
+            <hr className='h-px my-3 bg-[#bbbbbb] border-0 rounded-full' />
             {posts.map(({ id, data: { name, description, message, photoURL } }) => (
                 <Post
                     key={id}
