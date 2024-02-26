@@ -2,7 +2,7 @@ import React from 'react';
 
 const Post = ({ name, description, message, photoURL }) => {
     return (
-        <div className='bg-white border border-gray-200 rounded-lg px-4 py-3 mb-4'>
+        <div className='bg-white border border-gray-200 rounded-lg px-4 py-3 mb-1'>
             <div className='flex mb-2 items-center'>
                 <div className='rounded-full overflow-hidden w-[55px] h-[55px] mr-2'>
                     <img src='/assets/avatar.png' alt='Porfile-pic' width={55} className='object-cover w-full h-full rounded-full' />

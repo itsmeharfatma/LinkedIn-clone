@@ -1,12 +1,35 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Post from './Post';
+import { db } from '../firebase';
+import firebase from 'firebase/compat/app';
 
 const Feed = () => {
+    const [input, setInput] = useState('');
     const [posts, setPosts] = useState([]);
+
+    useEffect(() => {
+        db.collection('posts').orderBy('timestamp', 'desc').onSnapshot((snapshot) =>
+            setPosts(
+                snapshot.docs.map((doc) => ({
+                    id: doc.id,
+                    data: doc.data(),
+                }))
+            )
+        );
+    }, [])
 
     const sendPost = (e) => {
         e.preventDefault();
 
+        db.collection('posts').add({
+            name: 'Mehar Fatma',
+            description: 'A test',
+            message: input,
+            photoURL: '',
+            timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+        });
+
+        setInput('');
     };
 
     return (
@@ -18,7 +41,7 @@ const Feed = () => {
                     </div>
                     <div className='w-11/12 border border-gray-400 rounded-full py-3 px-6'>
                         <form className='flex justify-between'>
-                            <input type='text' placeholder='Start a post, try writing with AI' className='w-full outline-none border-none' />
+                            <input value={input} onChange={(e) => setInput(e.target.value)} type='text' placeholder='Start a post, try writing with AI' className='w-full outline-none border-none' />
                             <button onClick={sendPost} type='submit' className='hidden'>Post</button>
                         </form>
                     </div>
@@ -40,16 +63,17 @@ const Feed = () => {
                 </div>
             </div>
 
-            {posts.map((post) => (
-                <Post />
+            {posts.map(({ id, data: { name, description, message, photoURL } }) => (
+                <Post
+                    key={id}
+                    name={name}
+                    description={description}
+                    message={message}
+                    photoURL={photoURL}
+                />
             ))}
-            <Post
-            name='Mehar Fatma'
-            description='A test'
-            message='Hello Connections!'
-            />
         </div>
-    )
+    );
 }
 
 export default Feed;
