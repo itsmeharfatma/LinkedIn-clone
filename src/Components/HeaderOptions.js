@@ -1,8 +1,8 @@
 import React from 'react';
 
-const HeaderOptions = ({ icon, title }) => {
+const HeaderOptions = ({ icon, title, onClick }) => {
   return (
-    <div className='flex flex-col items-center cursor-pointer'>
+    <div onClick={onClick} className='flex flex-col items-center cursor-pointer'>
       <div className='mb-1'>{icon}</div>
       <h4 className='text-sm text-gray-600 overRide'>{title}</h4>
     </div>

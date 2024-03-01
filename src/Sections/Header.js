@@ -1,7 +1,17 @@
 import React from 'react';
 import HeaderOptions from '../Components/HeaderOptions';
+import { useDispatch } from 'react-redux';
+import { logout } from '../features/counter/userSlice';
+import { auth } from '../firebase';
 
 const Header = () => {
+  const dispatch = useDispatch();
+
+  const logoutOfApp = () => {
+    dispatch(logout())
+    auth.signOut();
+  };
+
   return (
     <header className='sticky top-0 w-full overflow-hidden z-10 shadow-sm bg-white'>
       <nav className='container mx-auto pt-4 pb-3 px-6 flex items-center justify-between'>
@@ -29,7 +39,7 @@ const Header = () => {
           <HeaderOptions icon={<i class="fa-solid fa-bell fa-lg overRide" style={{ color: "#696969" }}></i>} title="Notifications" />
           <HeaderOptions icon={<div className='rounded-full overflow-hidden w-[28px] h-[28px]'>
             <img src='/assets/avatar.png' alt='Porfile-pic' width={25} className='object-cover w-full h-full rounded-full' />
-          </div>} title="Me" />
+          </div>} title="Me" onClick={logoutOfApp} />
         </div>
       </nav>
     </header>

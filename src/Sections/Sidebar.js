@@ -1,6 +1,10 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
+import { selectUser } from '../features/counter/userSlice';
 
 const Sidebar = () => {
+    const user = useSelector(selectUser);
+
     const recentItem = (topic) => {
         return (
             <div className='flex text-xs text-[#86888a] font-semibold my-1 mx-1 px-3 py-0.5 rounded-full bg-gray-100 hover:text-black cursor-pointer'>
@@ -23,10 +27,11 @@ const Sidebar = () => {
                 <img src='/assets/background-pic.jpg' alt='Background-pic'
                     className='w-full object-cover rounded-t-lg h-16' />
                 <div className='bg-white rounded-full w-[75px] h-[75px] -mt-10 mb-4 cursor-pointer overflow-hidden'>
-                    <img src='/assets/avatar.png' alt='Porfile-pic' className='object-cover w-full h-full rounded-full border-2 border-white' />
+                    <img src={user.photoUrl} alt='Porfile-pic' className='object-cover w-full h-full rounded-full border-2 border-white' />
+                    {user.displayName[0]}
                 </div>
-                <h2 className='font-semibold cursor-pointer hover:underline hover:decoration-[#8d6cab]'>Mehar Fatma</h2>
-                <h4 className='text-sm text-[#86888a] font-light'>meharfatma1234@gmail.com</h4>
+                <h2 className='font-semibold cursor-pointer hover:underline hover:decoration-[#8d6cab]'>{user.displayName}</h2>
+                <h4 className='text-sm text-[#86888a] font-light'>{user.email}</h4>
             </div>
             <div className='flex flex-col border border-gray-200 border-t-0 rounded-b-lg py-3 bg-white'>
                 <div className='flex justify-between hover:bg-gray-100 cursor-pointer py-1.5 px-4'>
