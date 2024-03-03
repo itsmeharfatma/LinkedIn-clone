@@ -18,8 +18,8 @@ const Login = () => {
                 email: userAuth.user.email,
                 uid: userAuth.user.uid,
                 displayName: userAuth.user.displayName,
-                profileUrl: userAuth.user.photoURL,
-            }))
+                photoUrl: userAuth.user.photoURL,
+            }));
         }).catch((error) => alert(error));
     };
 
@@ -44,17 +44,20 @@ const Login = () => {
     };
 
     return (
-        <div className='flex flex-col items-center gap-6 bg-slate-50 h-[100vh]'>
-            <img src='assets/linkedin-main-logo.png' alt='logo' className='object-contain mt-8' width={220} />
+        <div className='flex flex-col items-center gap-4 bg-slate-50 h-[100vh]'>
+            <div className='flex items-center justify-center mt-4'>
+                <h1 className='text-5xl text-[#0077b5] font-bold'>Linked</h1>
+                <img src='assets/linkedin-logo.png' alt='logo' className='object-contain' width={75} />
+            </div>
 
-            <form className='flex flex-col bg-white border border-gray-200 shadow-md rounded-lg py-10 px-6 space-y-8 w-96'>
+            <form className='flex flex-col bg-white border border-gray-200 shadow-md rounded-lg py-12 px-8 space-y-7 w-96'>
                 <input value={name} onChange={(e) => setName(e.target.value)} type='text' placeholder='Full name ( required if registering )' className='border border-gray-200 w-full outline-none rounded-md py-1 px-2' />
                 <input value={profilePic} onChange={(e) => setProfilePic(e.target.value)} type='text' placeholder='Profile Picture URL ( optional )' className='border border-gray-200 w-full outline-none rounded-md py-1 px-2' />
                 <input value={email} onChange={(e) => setEmail(e.target.value)} type='email' placeholder='Email id' className='border border-gray-200 w-full outline-none rounded-md py-1 px-2' />
                 <input value={password} onChange={(e) => setPassword(e.target.value)} type='password' placeholder='Password' className='border border-gray-200 w-full outline-none rounded-md py-1 px-2' />
-                <button type='submit' onClick={loginToApp} className='rounded-md py-1 px-2 w-full bg-[#00a0dc] text-white' >Sign In</button>
+                <button type='submit' onClick={loginToApp} className='rounded-md py-1 px-2 w-full bg-[#0077b5] text-white' >Sign In</button>
             </form>
-            <p>Not a member? <span className='text-[#00a0dc] cursor-pointer' onClick={register}>Register Now</span>
+            <p>Not a member? <span className='text-[#0077b5] cursor-pointer' onClick={register}>Register Now</span>
             </p>
         </div>
     )

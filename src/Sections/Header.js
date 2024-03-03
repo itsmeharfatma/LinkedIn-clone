@@ -1,10 +1,11 @@
 import React from 'react';
 import HeaderOptions from '../Components/HeaderOptions';
-import { useDispatch } from 'react-redux';
-import { logout } from '../features/counter/userSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import { logout, selectUser } from '../features/counter/userSlice';
 import { auth } from '../firebase';
 
 const Header = () => {
+  const user = useSelector(selectUser);
   const dispatch = useDispatch();
 
   const logoutOfApp = () => {
@@ -37,9 +38,13 @@ const Header = () => {
           <HeaderOptions icon={<i class="fa-solid fa-briefcase fa-lg overRide" style={{ color: "#696969" }}></i>} title="Jobs" />
           <HeaderOptions icon={<i class="fa-solid fa-message fa-lg overRide" style={{ color: "#696969" }}></i>} title="Messaging" />
           <HeaderOptions icon={<i class="fa-solid fa-bell fa-lg overRide" style={{ color: "#696969" }}></i>} title="Notifications" />
-          <HeaderOptions icon={<div className='rounded-full overflow-hidden w-[28px] h-[28px]'>
-            <img src='/assets/avatar.png' alt='Porfile-pic' width={25} className='object-cover w-full h-full rounded-full' />
-          </div>} title="Me" onClick={logoutOfApp} />
+          <HeaderOptions icon={
+            user.photoUrl ? (
+              <div className='rounded-full overflow-hidden w-[28px] h-[28px]'>
+                <img src={user.photoUrl} alt='' width={25} className='object-cover w-full h-full rounded-full border-2 border-white' />
+              </div>
+            ) : (<div className='rounded-full w-[25px] h-[25px] overflow-hidden text-center text-white bg-[#696969]'>{user.displayName[0]}</div>)
+          } title="Me" onClick={logoutOfApp} />
         </div>
       </nav>
     </header>

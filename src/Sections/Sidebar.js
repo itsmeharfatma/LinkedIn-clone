@@ -27,7 +27,12 @@ const Sidebar = () => {
                 <img src='/assets/background-pic.jpg' alt='Background-pic'
                     className='w-full object-cover rounded-t-lg h-16' />
                 <div className='bg-white rounded-full w-[75px] h-[75px] -mt-10 mb-4 cursor-pointer overflow-hidden'>
-                    <img src={user.photoUrl} alt='Porfile-pic' className='object-cover w-full h-full rounded-full border-2 border-white' />
+                    {/* {!user.photoUrl ? (
+                        <img src={user.displayName[0]} alt='' />
+                    ) : (
+                        <img src={user.photoUrl} alt='' className='object-cover w-full h-full rounded-full border-2 border-white' />
+                    )} */}
+                    <img src={user.photoUrl} alt='' className='border-2 border-white' />
                     {user.displayName[0]}
                 </div>
                 <h2 className='font-semibold cursor-pointer hover:underline hover:decoration-[#8d6cab]'>{user.displayName}</h2>

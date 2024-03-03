@@ -38,7 +38,6 @@ function App() {
         <div className='bg-gray-100 flex py-3 px-14'>
           <Sidebar />
 
-          {/* Feed */}
           <Feed />
           {/* Widgets */}
         </div>
