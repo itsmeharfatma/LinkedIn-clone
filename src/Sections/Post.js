@@ -1,11 +1,21 @@
 import React from 'react';
+import { selectUser } from '../features/counter/userSlice';
+import { useSelector } from 'react-redux';
 
 const Post = ({ name, description, message, photoURL }) => {
+    const user = useSelector(selectUser);
+
     return (
         <div className='bg-white border border-gray-200 rounded-lg px-4 pt-3 pb-1 mb-2'>
             <div className='flex mb-2 items-center cursor-pointer'>
-                <div className='rounded-full overflow-hidden w-[55px] h-[55px] mr-2'>
-                    <img src='/assets/avatar.png' alt='Porfile-pic' width={55} className='object-cover w-full h-full rounded-full' />
+                {/* <div className='rounded-full overflow-hidden w-[55px] h-[55px] mr-2'>
+                    <img src='/assets/avatar.png' alt='' width={55} className='object-cover w-full h-full rounded-full' />
+                </div> */}
+                <div className='bg-gray-400 rounded-full overflow-hidden mr-2 text-center items-center text-white w-[55px] h-[55px]'>
+                    <img src={user.photoUrl} alt='' width={55} />
+                    <div className='mt-3 text-xl'>
+                        {user?.displayName?.charAt(0) || ''}
+                    </div>
                 </div>
                 <div>
                     <h2 className='font-semibold text-[#424242] hover:text-[#00a0dc] hover:underline hover:decoration-[#00a0dc]'>{name}</h2>

@@ -19,9 +19,10 @@ const Header = () => {
         {/* header-left */}
         <div className='flex items-center'>
           <img
-            src='/assets/linkedin-logo-48.png'
+            src='/assets/linkedin_logo_48.png'
             alt='LinkedIn Logo'
-            className='object-contain'
+            width={40}
+            className='object-contain mr-1'
           />
 
           {/* search bar */}
@@ -39,11 +40,15 @@ const Header = () => {
           <HeaderOptions icon={<i class="fa-solid fa-message fa-lg overRide" style={{ color: "#696969" }}></i>} title="Messaging" />
           <HeaderOptions icon={<i class="fa-solid fa-bell fa-lg overRide" style={{ color: "#696969" }}></i>} title="Notifications" />
           <HeaderOptions icon={
-            user.photoUrl ? (
+            user && user.photoUrl ? (
               <div className='rounded-full overflow-hidden w-[28px] h-[28px]'>
                 <img src={user.photoUrl} alt='' width={25} className='object-cover w-full h-full rounded-full border-2 border-white' />
               </div>
-            ) : (<div className='rounded-full w-[25px] h-[25px] overflow-hidden text-center text-white bg-[#696969]'>{user.displayName[0]}</div>)
+            ) : (
+              <div className='rounded-full w-[25px] h-[25px] overflow-hidden text-center text-white bg-[#696969]'>
+                {user?.displayName?.charAt(0) || ''}
+              </div>
+            )
           } title="Me" onClick={logoutOfApp} />
         </div>
       </nav>
