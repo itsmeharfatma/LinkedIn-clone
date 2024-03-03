@@ -1,20 +1,17 @@
-import React from 'react';
-import { selectUser } from '../features/counter/userSlice';
-import { useSelector } from 'react-redux';
+import React, { forwardRef } from 'react';
 
-const Post = ({ name, description, message, photoURL }) => {
-    const user = useSelector(selectUser);
-
+const Post = forwardRef(({ name, description, message, photoUrl }, ref) => {
+    
     return (
-        <div className='bg-white border border-gray-200 rounded-lg px-4 pt-3 pb-1 mb-2'>
+        <div ref={ref} className='bg-white border border-gray-200 rounded-lg px-4 pt-3 pb-1 mb-2'>
             <div className='flex mb-2 items-center cursor-pointer'>
                 {/* <div className='rounded-full overflow-hidden w-[55px] h-[55px] mr-2'>
                     <img src='/assets/avatar.png' alt='' width={55} className='object-cover w-full h-full rounded-full' />
                 </div> */}
                 <div className='bg-gray-400 rounded-full overflow-hidden mr-2 text-center items-center text-white w-[55px] h-[55px]'>
-                    <img src={user.photoUrl} alt='' width={55} />
+                    <img src={photoUrl} alt='' width={55} />
                     <div className='mt-3 text-xl'>
-                        {user?.displayName?.charAt(0) || ''}
+                        {name[0]}
                     </div>
                 </div>
                 <div>
@@ -48,6 +45,6 @@ const Post = ({ name, description, message, photoURL }) => {
             </div>
         </div>
     )
-}
+})
 
 export default Post;

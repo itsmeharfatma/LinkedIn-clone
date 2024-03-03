@@ -4,6 +4,7 @@ import { db } from '../firebase';
 import firebase from 'firebase/compat/app';
 import { useSelector } from 'react-redux';
 import { selectUser } from '../features/counter/userSlice';
+import FlipMove from 'react-flip-move';
 
 const Feed = () => {
     const user = useSelector(selectUser);
@@ -28,7 +29,7 @@ const Feed = () => {
             name: user.displayName,
             description: user.email,
             message: input,
-            photoUrl: user.photoUrl,
+            photoUrl: user.photoUrl || '',
             timestamp: firebase.firestore.FieldValue.serverTimestamp(),
         });
 
@@ -69,15 +70,19 @@ const Feed = () => {
                 </div>
             </div>
             <hr className='h-px my-3 bg-[#bbbbbb] border-0 rounded-full' />
-            {posts.map(({ id, data: { name, description, message, photoURL } }) => (
-                <Post
-                    key={id}
-                    name={name}
-                    description={description}
-                    message={message}
-                    photoURL={photoURL}
-                />
-            ))}
+
+            <FlipMove>
+                {posts.map(({ id, data: { name, description, message, photoURL } }) => (
+                    <Post
+                        key={id}
+                        name={name}
+                        description={description}
+                        message={message}
+                        photoURL={photoURL}
+                    />
+                ))}
+            </FlipMove>
+
         </div>
     );
 }

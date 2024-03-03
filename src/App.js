@@ -29,13 +29,13 @@ function App() {
   }, []);
 
   return (
-    <main className="flex flex-col">
+    <main className="bg-gray-100 flex flex-col">
       <Header />
 
       {!user ? (
         <Login />
       ) : (
-        <div className='bg-gray-100 flex py-3 px-14'>
+        <div className='flex max-w-7xl py-3 px-14'>
           <Sidebar />
 
           <Feed />
