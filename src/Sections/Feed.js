@@ -48,7 +48,7 @@ const Feed = () => {
                     </div>
                     <div className='w-11/12 border border-gray-400 rounded-full py-3 px-6'>
                         <form className='flex justify-between'>
-                            <input value={input} onChange={(e) => setInput(e.target.value)} type='text' placeholder='Start a post, try writing with AI' className='w-full outline-none border-none' />
+                            <input value={input} onChange={(e) => setInput(e.target.value)} type='text' placeholder='Start a post' className='w-full outline-none border-none' />
                             <button onClick={sendPost} type='submit' className='hidden'></button>
                         </form>
                     </div>

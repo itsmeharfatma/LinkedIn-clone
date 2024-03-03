@@ -41,7 +41,7 @@ const Sidebar = () => {
                         {user?.displayName?.charAt(0) || ''}
                     </div>
                 </div>
-                <h2 className='font-semibold cursor-pointer hover:underline hover:decoration-[#8d6cab]'>{user.displayName}</h2>
+                <h2 className='font-semibold text-[#383838] cursor-pointer hover:underline hover:decoration-[#8d6cab]'>{user.displayName}</h2>
                 <h4 className='text-sm text-[#86888a] font-light'>{user.email}</h4>
             </div>
             <div className='flex flex-col border border-gray-200 border-t-0 rounded-b-lg py-3 bg-white'>
