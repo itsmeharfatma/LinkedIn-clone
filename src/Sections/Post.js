@@ -8,9 +8,9 @@ const Post = forwardRef(({ name, description, message, photoUrl }, ref) => {
                 {/* <div className='rounded-full overflow-hidden w-[55px] h-[55px] mr-2'>
                     <img src='/assets/avatar.png' alt='' width={55} className='object-cover w-full h-full rounded-full' />
                 </div> */}
-                <div className='bg-gray-400 rounded-full overflow-hidden mr-2 text-center items-center text-white w-[52px] h-[52px]'>
+                <div className='bg-[#9b9b9b] rounded-full overflow-hidden mr-2 text-center items-center text-white w-[52px] h-[52px]'>
                     <img src={photoUrl} alt='' width={52} />
-                    <div className='mt-3 text-xl'>
+                    <div className='flex items-center justify-center text-xl rounded-full w-[52px] h-[52px]'>
                         {name[0]}
                     </div>
                 </div>

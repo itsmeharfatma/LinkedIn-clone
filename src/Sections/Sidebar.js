@@ -26,7 +26,7 @@ const Sidebar = () => {
             <div className='flex flex-col items-center border border-gray-200 rounded-t-lg pb-4 bg-white text-center'>
                 <img src='/assets/background-pic.jpg' alt='Background-pic' loading='eager'
                     className='w-full object-cover rounded-t-lg h-16' />
-                <div className='bg-gray-400 rounded-full w-[75px] h-[75px] -mt-10 mb-2 cursor-pointer overflow-hidden'>
+                <div className='bg-[#0a66c2] rounded-full w-[75px] h-[75px] -mt-10 mb-2 cursor-pointer overflow-hidden'>
                     {/* {!user.photoUrl ? (
                         <img src={user.displayName[0]} alt='' />
                     ) : (
@@ -37,7 +37,7 @@ const Sidebar = () => {
                         {user.displayName[0]}
                     </div> */}
                     <img src={user.photoUrl} alt='' />
-                    <div className='mt-5 text-3xl text-white'>
+                    <div className='flex items-center justify-center text-3xl text-white border-[3px] border-white rounded-full w-[75px] h-[75px]'>
                         {user?.displayName?.charAt(0) || ''}
                     </div>
                 </div>

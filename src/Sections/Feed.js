@@ -40,9 +40,9 @@ const Feed = () => {
         <div className='flex flex-col w-1/2 mx-6'>
             <div className='flex flex-col justify-between bg-white pt-4 pb-1 px-4 border border-gray-200 rounded-lg'>
                 <div className='flex justify-between mb-1'>
-                    <div className='bg-gray-400 rounded-full overflow-hidden mr-2 text-center items-center text-white w-[52px] h-[52px]'>
+                    <div className='bg-[#9b9b9b] rounded-full overflow-hidden mr-2 text-center items-center text-white w-[52px] h-[52px]'>
                         <img src={user.photoUrl} alt='' width={52} />
-                        <div className='mt-3 text-xl'>
+                        <div className='flex items-center justify-center text-xl rounded-full w-[52px] h-[52px]'>
                             {user?.displayName?.charAt(0) || ''}
                         </div>
                     </div>
