@@ -45,7 +45,7 @@ const Header = () => {
                 <img src={user.photoUrl} alt='' width={25} className='object-cover w-full h-full rounded-full border-2 border-white' />
               </div>
             ) : (
-              <div className='rounded-full w-[25px] h-[25px] overflow-hidden text-center text-white bg-[#696969]'>
+              <div className='rounded-full w-[25px] h-[25px] hover:bg-black overflow-hidden text-center text-white bg-[#696969]'>
                 {user?.displayName?.charAt(0) || ''}
               </div>
             )

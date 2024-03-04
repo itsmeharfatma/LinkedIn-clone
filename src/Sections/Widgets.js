@@ -3,7 +3,7 @@ import React from 'react';
 const Widgets = () => {
     const newsArticle = (heading, subtitle) => {
         return (
-            <div className='flex p-2 cursor-pointer'>
+            <div className='flex py-1 px-4 hover:bg-gray-100 cursor-pointer'>
                 <div className='mr-2'>
                     <i class="fa-solid fa-circle fa-2xs" style={{ color: "#585858" }}></i>
                 </div>
@@ -16,8 +16,8 @@ const Widgets = () => {
     };
 
     return (
-        <div className='w-1/5 sticky top-20 bg-white rounded-lg h-fit pb-4 '>
-            <div className='flex items-center justify-between p-2'>
+        <div className='w-[25%] sticky top-[84px] bg-white border border-gray-200 rounded-lg h-fit pb-4 '>
+            <div className='flex items-center justify-between pt-3 pb-1 px-3'>
                 <h2 className='font-semibold text-[#3f3f3f] text-md'>LinkedIn News</h2>
                 <i class="fa-solid fa-circle-info" style={{ color: "#333333" }}></i>
             </div>

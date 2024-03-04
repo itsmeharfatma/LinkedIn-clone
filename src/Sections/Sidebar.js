@@ -21,7 +21,7 @@ const Sidebar = () => {
     };
 
     return (
-        <div className='sticky top-20 w-1/5 rounded-lg h-fit'>
+        <div className='sticky top-[84px] w-[25%] rounded-lg h-fit'>
             {/* top-sidebar */}
             <div className='flex flex-col items-center border border-gray-200 rounded-t-lg pb-4 bg-white text-center'>
                 <img src='/assets/background-pic.jpg' alt='Background-pic'

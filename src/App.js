@@ -36,7 +36,7 @@ function App() {
       {!user ? (
         <Login />
       ) : (
-        <div className='flex max-w-7xl py-3 px-14'>
+        <div className='flex max-w-7xl mx-auto py-3 px-14'>
           <Sidebar />
 
           <Feed />
