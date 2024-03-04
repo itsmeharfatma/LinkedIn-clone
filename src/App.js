@@ -31,17 +31,19 @@ function App() {
 
   return (
     <main className="bg-gray-100 flex flex-col">
-      <Header />
-
       {!user ? (
         <Login />
       ) : (
-        <div className='flex max-w-7xl mx-auto py-3 px-14'>
-          <Sidebar />
+        <div className='bg-gray-100 flex flex-col'>
+          <Header />
 
-          <Feed />
-          
-          <Widgets />
+          <div className='flex max-w-7xl mx-auto py-3 px-14'>
+            <Sidebar />
+
+            <Feed />
+
+            <Widgets />
+          </div>
         </div>
       )}
     </main>
