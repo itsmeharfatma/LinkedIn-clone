@@ -24,7 +24,7 @@ const Sidebar = () => {
         <div className='sticky top-[84px] w-[25%] rounded-lg h-fit'>
             {/* top-sidebar */}
             <div className='flex flex-col items-center border border-gray-200 rounded-t-lg pb-4 bg-white text-center'>
-                <img src='/assets/background-pic.jpg' alt='Background-pic'
+                <img src='/assets/background-pic.jpg' alt='Background-pic' loading='eager'
                     className='w-full object-cover rounded-t-lg h-16' />
                 <div className='bg-gray-400 rounded-full w-[75px] h-[75px] -mt-10 mb-2 cursor-pointer overflow-hidden'>
                     {/* {!user.photoUrl ? (
