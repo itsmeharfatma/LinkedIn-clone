@@ -15,7 +15,7 @@ const Header = () => {
 
   return (
     <header className='sticky top-0 w-full overflow-hidden z-10 shadow-sm bg-white'>
-      <nav className='container mx-auto pt-4 pb-3 px-6 flex items-center justify-between'>
+      <nav className='max-w-7xl mx-auto pt-4 pb-3 px-6 flex items-center justify-between'>
         {/* header-left */}
         <div className='flex items-center'>
           <img

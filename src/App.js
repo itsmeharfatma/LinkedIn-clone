@@ -37,7 +37,7 @@ function App() {
         <div className='bg-gray-100 flex flex-col'>
           <Header />
 
-          <div className='flex max-w-7xl mx-auto py-3 px-14'>
+          <div className='flex max-md:flex-col max-w-7xl justify-center max-md:items-center md:mx-auto pt-0 md:pt-3 pb-3 sm:px-10 md:px-14'>
             <Sidebar />
 
             <Feed />

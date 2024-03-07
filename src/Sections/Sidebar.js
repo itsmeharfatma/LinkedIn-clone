@@ -21,11 +21,11 @@ const Sidebar = () => {
     };
 
     return (
-        <div className='sticky top-[84px] w-[25%] rounded-lg h-fit'>
+        <div className='md:sticky max-md:mb-4 top-[84px] w-[100%] md:w-[30%] lg:w-[25%] sm:rounded-lg h-fit'>
             {/* top-sidebar */}
-            <div className='flex flex-col items-center border border-gray-200 rounded-t-lg pb-4 bg-white text-center'>
+            <div className='flex flex-col items-center border border-gray-200 sm:rounded-lg md:rounded-none md:rounded-t-lg pb-4 bg-white text-center'>
                 <img src='/assets/background-pic.jpg' alt='Background-pic' loading='eager'
-                    className='w-full object-cover rounded-t-lg h-16' />
+                    className='w-full object-cover sm:rounded-t-lg h-16' />
                 <div className='bg-[#0a66c2] rounded-full w-[75px] h-[75px] -mt-10 mb-2 cursor-pointer overflow-hidden'>
                     {/* {!user.photoUrl ? (
                         <img src={user.displayName[0]} alt='' />
@@ -44,7 +44,7 @@ const Sidebar = () => {
                 <h2 className='font-semibold text-[#383838] cursor-pointer hover:underline hover:decoration-[#8d6cab]'>{user.displayName}</h2>
                 <h4 className='text-sm text-[#86888a] font-light'>{user.email}</h4>
             </div>
-            <div className='flex flex-col border border-gray-200 border-t-0 rounded-b-lg py-3 bg-white'>
+            <div className='flex flex-col border border-gray-200 border-t-0 rounded-b-lg py-3 bg-white max-md:hidden'>
                 <div className='flex justify-between hover:bg-gray-100 cursor-pointer py-1.5 px-4'>
                     <p className='text-xs text-[#86888a] font-medium'>Profile viewers</p>
                     <p className='text-xs text-[#00a0dc] font-bold'>23</p>
@@ -55,7 +55,7 @@ const Sidebar = () => {
                 </div>
             </div>
             {/* bottom-sidebar */}
-            <div className='flex flex-col border border-gray-200 rounded-t-lg py-4 bg-white mt-2'>
+            <div className='flex flex-col border border-gray-200 rounded-t-lg py-4 bg-white mt-2 max-md:hidden'>
                 {bottomSidebarTitle('Recent')}
                 <div className='flex flex-wrap px-2 mb-3'>
                     {recentItem('reactjs')}
@@ -70,7 +70,7 @@ const Sidebar = () => {
                     {bottomSidebarTitle('Followed Hashtags')}
                 </div>
             </div>
-            <div className='flex border border-gray-200 border-t-0 rounded-b-lg py-4 justify-center bg-white hover:bg-gray-100 cursor-pointer'>
+            <div className='flex border border-gray-200 border-t-0 rounded-b-lg py-4 justify-center bg-white hover:bg-gray-100 cursor-pointer max-md:hidden'>
                 <p className='text-[#86888a] font-medium text-sm'>Discover more</p>
             </div>
         </div>

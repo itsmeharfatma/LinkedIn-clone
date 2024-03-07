@@ -16,7 +16,7 @@ const Widgets = () => {
     };
 
     return (
-        <div className='w-[25%] sticky top-[84px] bg-white border border-gray-200 rounded-lg h-fit pb-4 '>
+        <div className='w-[25%] sticky top-[84px] bg-white border border-gray-200 rounded-lg h-fit pb-4 max-lg:hidden'>
             <div className='flex items-center justify-between pt-3 pb-1 px-3'>
                 <h2 className='font-semibold text-[#3f3f3f] text-md'>LinkedIn News</h2>
                 <i class="fa-solid fa-circle-info" style={{ color: "#333333" }}></i>
