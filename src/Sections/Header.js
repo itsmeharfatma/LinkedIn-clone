@@ -26,18 +26,18 @@ const Header = () => {
           />
 
           {/* search bar */}
-          <div className='flex items-center px-4 py-1 h-[38px] gap-2 bg-[#eef3f8] rounded'>
+          <div className='flex items-center max-[380px]:px-1.5 px-4 py-1 h-[38px] gap-2 bg-[#eef3f8] rounded'>
             <i class="fa-solid fa-magnifying-glass" style={{ color: "#696969" }}></i>
-            <input type='text' placeholder='Search' className='outline-none border-none bg-[#eef3f8]' />
+            <input type='text' placeholder='Search' className='outline-none border-none bg-[#eef3f8] max-sm:w-full' />
           </div>
         </div>
 
         {/* header-right */}
         <div className='flex gap-7 items-center'>
-          <HeaderOptions icon={<i class="fa-solid fa-house fa-lg overRide" style={{ color: "#696969" }}></i>} title="Home" />
-          <HeaderOptions icon={<i class="fa-solid fa-user-group fa-lg overRide" style={{ color: "#696969" }}></i>} title="My Network" />
-          <HeaderOptions icon={<i class="fa-solid fa-briefcase fa-lg overRide" style={{ color: "#696969" }}></i>} title="Jobs" />
-          <HeaderOptions icon={<i class="fa-solid fa-message fa-lg overRide" style={{ color: "#696969" }}></i>} title="Messaging" />
+          <HeaderOptions icon={<i class="fa-solid fa-house fa-lg overRide max-[620px]:hidden" style={{ color: "#696969" }}></i>} title="Home" />
+          <HeaderOptions icon={<i class="fa-solid fa-user-group fa-lg overRide max-[560px]:hidden" style={{ color: "#696969" }}></i>} title="My Network" />
+          <HeaderOptions icon={<i class="fa-solid fa-briefcase fa-lg overRide max-[500px]:hidden" style={{ color: "#696969" }}></i>} title="Jobs" />
+          <HeaderOptions icon={<i class="fa-solid fa-message fa-lg overRide max-[500px]:hidden" style={{ color: "#696969" }}></i>} title="Messaging" />
           <HeaderOptions icon={<i class="fa-solid fa-bell fa-lg overRide" style={{ color: "#696969" }}></i>} title="Notifications" />
           <HeaderOptions icon={
             user && user.photoUrl ? (

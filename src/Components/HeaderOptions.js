@@ -11,7 +11,7 @@ const HeaderOptions = ({ icon, title, onClick }) => {
       <div className='mb-1'>
         {user ? icon : null}
       </div>
-      <h4 className='text-sm text-gray-600 overRide'>{title}</h4>
+      <h4 className='text-sm text-gray-600 overRide max-[800px]:hidden'>{title}</h4>
     </div>
   )
 }
