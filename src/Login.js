@@ -51,7 +51,7 @@ const Login = () => {
                     <img src='assets/linked_in_logo_64.png' alt='logo' className='object-contain' />
                 </div>
 
-                <form className='flex flex-col bg-white border border-gray-200 shadow-md rounded-lg space-y-7 py-3 px-2 w-64 sm:py-12 sm:px-8 sm:w-96'>
+                <form className='flex flex-col bg-white border border-gray-200 shadow-md rounded-lg space-y-7 py-4 px-3 w-72 sm:py-12 sm:px-8 sm:w-96'>
                     <input value={name} onChange={(e) => setName(e.target.value)} type='text' placeholder='Full name ( required if registering )' className='border border-gray-200 w-full outline-none rounded-md py-1 px-2' />
                     {/* <input value={profilePic} onChange={(e) => setProfilePic(e.target.value)} type='text' placeholder='Profile Picture URL ( optional )' className='border border-gray-200 w-full outline-none rounded-md py-1 px-2' /> */}
                     <input value={email} onChange={(e) => setEmail(e.target.value)} type='email' placeholder='Email id' className='border border-gray-200 w-full outline-none rounded-md py-1 px-2' />
